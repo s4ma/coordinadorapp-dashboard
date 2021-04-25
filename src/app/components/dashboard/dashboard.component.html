@@ -1,0 +1,54 @@
+<div class="loader" *ngIf="!view">
+    <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+</div>
+
+<div class="dashboard" *ngIf="view">
+    <div class="header-logo">
+        <div class="logo">
+            <img src="assets/img/logo-coordinadora.png" alt="coordinadora logo">
+        </div>
+    </div>
+    <div class="blue-line">
+        <div class="content-line">
+            <div class="aso bl-item">
+                <div class="tab-content">
+                    <div class="blu-circle circle status_active"></div>
+                    <div class="aso-text">
+                        All systems operational
+                    </div>
+                </div>
+            </div>
+            <div class="refresh bl-item">
+                <div class="tab-content">
+                    <div class="refresh-date">
+                        Refreshed {{refreshed | date: "longTime"}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-content">
+        <div class="ul3d">
+            <span>UPTIME </span>
+            <span>Last 30 days</span>
+        </div>
+        <div class="uptime-30-days">
+            <app-days 
+                title="Sigo APP" 
+                [data]="req_data.status.apis[0].tracking.days"
+                [current_status]="req_data.status.apis[0].tracking.current_status"
+            ></app-days>
+            <app-days 
+                title="Tracking" 
+                [data]="req_data.status.apis[1].authenticacion.days"
+                [current_status]="req_data.status.apis[1].authenticacion.current_status"
+            ></app-days>
+        </div>
+        <div class="overall-uptime">
+            <app-overall-uptime 
+                [sigoApp]="req_data.status.apis[0].tracking.days"
+                [tracking]="req_data.status.apis[1].authenticacion.days"
+            ></app-overall-uptime>
+        </div>
+    </div>
+</div>

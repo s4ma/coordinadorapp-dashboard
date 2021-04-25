@@ -1,0 +1,25 @@
+<div class="o-uptime">
+    <div class="title">
+        <h4>OVERALL UPTIME</h4>
+    </div>
+    <div class="o-uptime-content">
+        <div class="last-24-h out-item">
+            <div class="ouc-data">
+                <h2>{{percents.last24h}}%</h2>
+                <span>Last 24 hours</span>
+            </div>
+        </div>
+        <div class="last-7-d out-item">
+            <div class="ouc-data">
+                <h2>{{percents.last7d | number : "2.2-2"}}%</h2>
+                <span>Last 7 days</span>
+            </div>
+        </div>
+        <div class="last-30-d out-item">
+            <div class="ouc-data">
+                <h2>{{percents.last30d | number: "2.2-2"}}%</h2>
+                <span>Last 30 days</span>
+            </div>
+        </div>
+    </div>
+</div>

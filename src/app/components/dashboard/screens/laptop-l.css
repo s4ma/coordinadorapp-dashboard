@@ -1,0 +1,13 @@
+@media screen and (min-width: 1440px ) {
+    .dashboard-content{
+        padding: 64px 320px;
+    }
+    .ul3d, .uptime-30-days, .overall-uptime{
+        max-width: 1000px;
+    }
+}
+@media screen and (min-width: 2000px){
+    .dashboard-content{
+        padding: 64px 320px 500px;
+    }
+}

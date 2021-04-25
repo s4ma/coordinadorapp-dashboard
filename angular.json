@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "dashboard-status": {
+    "coordinadorapp-dashboard": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/dashboard-status",
+            "outputPath": "dist/coordinadorapp-dashboard",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "dashboard-status:build"
+            "browserTarget": "coordinadorapp-dashboard:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "dashboard-status:build:production"
+              "browserTarget": "coordinadorapp-dashboard:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "dashboard-status:build"
+            "browserTarget": "coordinadorapp-dashboard:build"
           }
         },
         "test": {
@@ -113,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "dashboard-status:serve"
+            "devServerTarget": "coordinadorapp-dashboard:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "dashboard-status:serve:production"
+              "devServerTarget": "coordinadorapp-dashboard:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "dashboard-status"
+  "defaultProject": "coordinadorapp-dashboard"
 }

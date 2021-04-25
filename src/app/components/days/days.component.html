@@ -1,0 +1,26 @@
+<div class="days">
+    <div class="days-content">
+        <div class="top old">
+            <div class="title">
+                <b>{{title}}</b>
+            </div>
+            <div class="up">
+                <div [class]="getClassActive()"></div>
+                <span>{{current_status | titlecase}}</span>
+            </div>
+        </div>
+        <div class="center">
+            <div class="data">
+                <div *ngFor="let item of data" [class]="getBgColor(item)"></div>
+            </div>
+        </div>
+        <div class="bottom old">
+            <div class="percentage">
+                <span>{{getMean() | number:'2.2-2'}}%</span>
+            </div>
+            <div class="today">
+                <span>Today</span>
+            </div>
+        </div>
+    </div>
+</div>
