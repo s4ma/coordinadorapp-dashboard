@@ -6,4 +6,6 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Instalar las dependencias con el comando `npm install`
 
-Ejecutar `npm start` para iniciar el servidor `http://localhost:4200/`
+Ejecutar `npm start` para iniciar el servidor
+
+Ir a la ruta `http://localhost:4200/dashboard` en el navegador para ver la app
